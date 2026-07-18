@@ -27,6 +27,7 @@ jobs:
             --iso-application "COMPUX" \
             --iso-volume "COMPUX" \
             --linux-flavours generic \
+            --apt-recommends false \
             --debian-installer false
 
       - name: COMPUX ISO yig'ish
