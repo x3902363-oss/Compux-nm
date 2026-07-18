@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Loyihani yuklab olish
         uses: actions/checkout@v4
-        - name: Hook fayllarga ruxsat berish
-        run: chmod +x config/hooks/live/*.hook.chroot
+
+      - name: Hook fayllarga ruxsat berish
         run: chmod +x config/hooks/live/*.hook.chroot
 
       - name: Qurilish vositalarini o'rnatish
