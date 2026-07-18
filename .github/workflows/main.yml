@@ -13,8 +13,12 @@ jobs:
       - name: Loyihani yuklab olish
         uses: actions/checkout@v4
 
-      - name: Hook fayllarga ruxsat berish
-        run: chmod +x config/hooks/live/*.hook.chroot
+      - name: Ruxsatlarni to'g'rilash
+        run: |
+          find config/hooks/live -type f -name "*.hook.chroot" -exec chmod +x {} \; 2>/dev/null || true
+          find config/includes.chroot/usr/local/bin -type f -exec chmod +x {} \; 2>/dev/null || true
+          find config/includes.chroot/etc/skel/Desktop -type f -name "*.desktop" -exec chmod +x {} \; 2>/dev/null || true
+          echo "Ruxsatlar tayyor"
 
       - name: Qurilish vositalarini o'rnatish
         run: |
