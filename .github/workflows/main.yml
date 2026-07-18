@@ -27,7 +27,7 @@ jobs:
             --iso-application "COMPUX" \
             --iso-volume "COMPUX" \
             --linux-flavours generic \
-            --debian-installer live
+            --debian-installer false
 
       - name: COMPUX ISO yig'ish
         run: sudo lb build
