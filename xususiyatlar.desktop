@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kompyuter xususiyatlari
+Comment=Protsessor, RAM, disk haqida ma'lumot
+Exec=/usr/local/bin/compux-system-properties.sh
+Icon=preferences-system
+Terminal=false
+Categories=System;

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action>
+    <icon>preferences-system</icon>
+    <name>Xususiyatlar (Tizim haqida)</name>
+    <unique-id>1626600000000001-1</unique-id>
+    <command>/usr/local/bin/compux-system-properties.sh</command>
+    <description>Kompyuter haqida ma'lumot - protsessor, RAM, disk</description>
+    <patterns>*</patterns>
+    <directories/>
+    <audio-files/>
+    <image-files/>
+    <other-files/>
+    <text-files/>
+    <video-files/>
+  </action>
+</actions>

@@ -1,0 +1,37 @@
+#!/bin/sh
+set -e
+# Bu skript ISO qurilayotganda avtomatik ishga tushadi va
+# tizimga COMPUX uchun standart tashqi ko'rinishni o'rnatadi.
+
+echo "== COMPUX: tema va standart sozlamalarni o'rnatish =="
+
+# Papirus va Arc temalarini GTK'ning standart temasi sifatida belgilash
+mkdir -p /etc/skel/.config/gtk-3.0
+cat > /etc/skel/.config/gtk-3.0/settings.ini << 'EOF'
+[Settings]
+gtk-theme-name=Arc-Dark
+gtk-icon-theme-name=Papirus
+gtk-font-name=Roboto 10
+gtk-cursor-theme-name=Adwaita
+gtk-cursor-theme-size=24
+EOF
+
+# LightDM login ekrani uchun ham bir xil temani belgilash
+if [ -d /etc/lightdm ]; then
+  mkdir -p /etc/lightdm/lightdm-gtk-greeter.conf.d
+  cat > /etc/lightdm/lightdm-gtk-greeter.conf.d/50-compux.conf << 'EOF'
+[greeter]
+theme-name = Arc-Dark
+icon-theme-name = Papirus
+background = /usr/share/backgrounds/compux/compux-wallpaper.png
+font-name = Roboto 10
+EOF
+fi
+
+# Standart wallpaper'ni tizim bo'yicha o'rnatish
+mkdir -p /etc/skel/.config
+cat > /etc/skel/.config/xfce4-desktop-defaults << 'EOF'
+last-image=/usr/share/backgrounds/compux/compux-wallpaper.png
+EOF
+
+echo "== Tayyor =="

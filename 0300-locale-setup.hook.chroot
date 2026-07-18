@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+echo "== COMPUX: o'zbekcha til va klaviaturani sozlash =="
+
+# uz_UZ lokalizatsiyasini yoqish (agar mavjud bo'lsa)
+if [ -f /etc/locale.gen ]; then
+  sed -i 's/^# *\(uz_UZ.UTF-8 UTF-8\)/\1/' /etc/locale.gen || true
+  echo "uz_UZ.UTF-8 UTF-8" >> /etc/locale.gen
+  locale-gen || true
+fi
+
+# Standart klaviatura tartibini o'zbekcha + inglizcha (Alt+Shift bilan almashtirish) qilib belgilash
+cat > /etc/default/keyboard << 'EOF'
+XKBMODEL="pc105"
+XKBLAYOUT="us,uz"
+XKBVARIANT=""
+XKBOPTIONS="grp:alt_shift_toggle"
+BACKSPACE="guess"
+EOF
+
+echo "== Tayyor =="

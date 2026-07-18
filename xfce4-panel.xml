@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Bu fayl XFCE panelini (taskbar) Windows uslubida joylashtiradi:
+  chapda "Boshlash" (Whisker) menyu tugmasi, o'rtada ochiq dasturlar ro'yxati,
+  o'ngda tizim ikonalari va soat.
+-->
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=8;x=0;y=0"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="size" type="uint" value="42"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="2"/>
+        <value type="int" value="3"/>
+        <value type="int" value="4"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="7"/>
+        <value type="int" value="8"/>
+      </property>
+    </property>
+  </property>
+
+  <!-- 1: Boshlash (Start) tugmasi - Whisker Menu -->
+  <property name="plugin-1" type="string" value="whiskermenu">
+    <property name="button-title" type="string" value="Boshlash"/>
+    <property name="button-icon" type="string" value="start-here"/>
+    <property name="show-button-title" type="bool" value="true"/>
+  </property>
+
+  <!-- 2: Vazifalar paneliga tezkor ilova belgilari (pinned launchers) -->
+  <property name="plugin-2" type="string" value="launcher">
+    <property name="items" type="array">
+      <value type="string" value="firefox-esr.desktop"/>
+    </property>
+  </property>
+
+  <!-- 3: Ochiq oynalar ro'yxati (taskbar tugmalari) -->
+  <property name="plugin-3" type="string" value="tasklist">
+    <property name="grouping" type="bool" value="true"/>
+    <property name="show-labels" type="bool" value="true"/>
+    <property name="flat-buttons" type="bool" value="true"/>
+  </property>
+
+  <!-- 4: Bo'sh joy (spacer) -->
+  <property name="plugin-4" type="string" value="separator">
+    <property name="expand" type="bool" value="true"/>
+    <property name="style" type="uint" value="0"/>
+  </property>
+
+  <!-- 5: Tizim tepsisi (tovush, tarmoq, batareya) -->
+  <property name="plugin-5" type="string" value="systray"/>
+
+  <!-- 6: Soat -->
+  <property name="plugin-6" type="string" value="clock">
+    <property name="digital-layout" type="uint" value="2"/>
+    <property name="digital-date-format" type="string" value="%d.%m.%Y"/>
+    <property name="digital-time-format" type="string" value="%H:%M"/>
+  </property>
+
+  <!-- 7: Quvvat/batareya (Windows Power Options o'rnida) -->
+  <property name="plugin-7" type="string" value="power-manager-plugin"/>
+
+  <!-- 8: Virtual ish stollari almashtirgich (Windows Task View o'rnida) -->
+  <property name="plugin-8" type="string" value="pager">
+    <property name="rows" type="uint" value="1"/>
+  </property>
+</channel>

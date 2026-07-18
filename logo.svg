@@ -1,0 +1,40 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3d91"/>
+      <stop offset="55%" stop-color="#1e6fd9"/>
+      <stop offset="100%" stop-color="#3a9bdc"/>
+    </linearGradient>
+    <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dfe9ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Circuit-style accents (referencing COMPUX repair/tech identity) -->
+  <g stroke="rgba(255,255,255,0.35)" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M60 380 h50 v40"/>
+    <path d="M452 140 h-50 v-40"/>
+    <circle cx="110" cy="380" r="6" fill="rgba(255,255,255,0.5)"/>
+    <circle cx="402" cy="100" r="6" fill="rgba(255,255,255,0.5)"/>
+  </g>
+
+  <!-- Stylized C (Compux) with a window-cut, forming a monitor/window motif -->
+  <path d="
+    M 336 128
+    A 128 128 0 1 0 336 384
+    L 336 320
+    A 64 64 0 1 1 336 192
+    Z
+  " fill="url(#cGrad)"/>
+
+  <!-- Small "window" square cut into the C, nodding to OS windows -->
+  <rect x="228" y="224" width="64" height="64" rx="10" fill="#0b3d91"/>
+  <rect x="238" y="234" width="44" height="10" rx="3" fill="url(#cGrad)"/>
+
+  <!-- Taskbar accent line -->
+  <rect x="140" y="404" width="232" height="10" rx="5" fill="rgba(255,255,255,0.55)"/>
+</svg>

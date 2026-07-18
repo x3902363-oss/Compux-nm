@@ -1,0 +1,48 @@
+name: COMPUX ISO qurish
+
+# Bu fayl GitHub'ning bulutdagi Linux kompyuterida avtomatik ishlaydi.
+# Sizning kompyuteringizda hech narsa o'rnatilmaydi.
+
+on:
+  workflow_dispatch: {}   # "Run workflow" tugmasi bilan qo'lda ishga tushirish
+  push:
+    branches: [ main ]
+
+jobs:
+  build-iso:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    steps:
+      - name: Loyihani yuklab olish
+        uses: actions/checkout@v4
+
+      - name: Qurilish vositalarini o'rnatish
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y live-build debootstrap squashfs-tools xorriso isolinux syslinux-efi grub-pc-bin grub-efi-amd64-bin mtools dosfstools
+
+      - name: live-build sozlash
+        run: |
+          lb config \
+            --distribution jammy \
+            --archive-areas "main restricted universe multiverse" \
+            --binary-images iso-hybrid \
+            --iso-application "COMPUX" \
+            --iso-volume "COMPUX" \
+            --linux-flavours generic \
+            --debian-installer live
+
+      - name: COMPUX ISO yig'ish
+        run: sudo lb build
+
+      - name: ISO faylni tayyorlash
+        run: |
+          mkdir -p output
+          find . -maxdepth 1 -iname "*.iso" -exec mv {} output/COMPUX.iso \;
+
+      - name: ISO faylni yuklab olish uchun saqlash
+        uses: actions/upload-artifact@v4
+        with:
+          name: COMPUX-ISO
+          path: output/COMPUX.iso
+          retention-days: 14

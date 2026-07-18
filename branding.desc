@@ -1,0 +1,29 @@
+# COMPUX o'rnatuvchi (installer) brendlash sozlamasi
+componentName: compux
+
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+
+strings:
+    productName:         "COMPUX"
+    shortProductName:    "COMPUX"
+    version:              "1.0"
+    shortVersion:         "1.0"
+    versionedName:        "COMPUX 1.0"
+    shortVersionedName:   "COMPUX 1.0"
+    bootloaderEntryName:  "COMPUX"
+    productUrl:           "https://compux.uz"
+    supportUrl:           "https://compux.uz"
+
+images:
+    productLogo:          "logo.svg"
+    productIcon:          "logo.svg"
+    productWelcome:       "slideshow-1.jpg"
+
+slideshow: "show.qml"
+
+style:
+   sidebarBackground:    "#050810"
+   sidebarText:          "#ffffff"
+   sidebarTextSelect:    "#00c3ff"
+   sidebarTextHighlight: "#0a1830"

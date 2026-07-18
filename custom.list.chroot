@@ -1,0 +1,214 @@
+# COMPUX uchun asosiy paketlar ro'yxati
+# Bu fayl live-build tomonidan avtomatik o'qiladi va shu paketlar tizimga o'rnatiladi
+
+## Asosiy ish stoli muhiti (yengil, tezkor, mo'ljalga oson)
+task-xfce-desktop
+xfce4
+xfce4-goodies
+xfce4-panel
+xfce4-whiskermenu-plugin
+xfce4-taskmanager
+
+## Oyna boshqaruvchi effektlar (Windows'dagi kabi soyalar, animatsiyalar)
+xfwm4
+xfwm4-themes
+compton
+
+## Windows'ga o'xshash tashqi ko'rinish (tema, ikonalar, kursor)
+arc-theme
+papirus-icon-theme
+fonts-noto
+fonts-roboto
+
+## Dock / Taskbar uchun qo'shimcha
+plank
+
+## O'rnatuvchi dastur (boshqa kompyuterga o'rnatish uchun - Windows setup kabi)
+calamares
+calamares-settings-debian
+
+## Kundalik kerakli dasturlar (Windows dasturlariga o'xshash vazifalarni bajaradi)
+firefox-esr
+libreoffice
+gimp
+vlc
+file-roller
+gnome-text-editor
+galculator
+network-manager-gnome
+pulseaudio
+pavucontrol
+
+## Tizim vositalari
+gdebi
+synaptic
+gparted
+htop
+
+## Dastur do'koni (Windows Store o'rnida - qidirib, bosib o'rnatish)
+gnome-software
+gnome-software-plugin-flatpak
+flatpak
+
+## Windows dasturlarini (.exe) ishga tushirish uchun
+wine
+winetricks
+playonlinux
+q4wine
+
+## Uskunalar bilan bog'liq (Bluetooth, printer, drayverlar oson o'rnatilishi uchun)
+software-properties-gtk
+bluez
+blueman
+cups
+system-config-printer
+printer-driver-all
+linux-firmware
+ubuntu-drivers-common
+
+## Disk shifrlash (BitLocker o'rnida - o'rnatishda tanlash imkoniyati)
+cryptsetup
+
+## Tizimni tiklash / zaxira nusxa (System Restore o'rnida)
+timeshift
+
+## Til va klaviatura (o'zbekcha)
+language-pack-uz
+language-selector-gnome
+
+## Masofaviy ish stoli (Remote Desktop - server va mijoz)
+xrdp
+remmina
+remmina-plugin-rdp
+remmina-plugin-vnc
+
+## Bulut xotira va onlayn hisoblar (Google Drive/OneDrive ulanishi uchun)
+gnome-online-accounts
+nextcloud-desktop
+
+## Qo'shimcha temalar (tanlash imkoniyati uchun)
+materia-gtk-theme
+numix-gtk-theme
+
+## Ish stoli widget'lari (ob-havo, resurs monitor)
+conky-all
+xfce4-weather-plugin
+xfce4-sensors-plugin
+xfce4-systemload-plugin
+
+## O'yinlar (Steam)
+steam-installer
+
+## Xavfsizlik devori (Firewall)
+ufw
+gufw
+
+## Tizim jurnali ko'ruvchi (Event Viewer o'rnida)
+gnome-logs
+
+## Virtual mashina (Hyper-V o'rnida)
+virtualbox
+
+## Pochta va Kalendar
+thunderbird
+gnome-calendar
+
+## Kamera ilovasi
+cheese
+
+## Ovoz yozish (Voice Recorder)
+gnome-sound-recorder
+
+## Yopishqoq eslatmalar (Sticky Notes)
+xfce4-notes-plugin
+
+## Qulaylik: ekran o'quvchi, kattalashtiruvchi, ekrandagi klaviatura
+orca
+kmag
+onboard
+
+## Tungi rejim / ko'z filtri (Night Light)
+redshift
+redshift-gtk
+
+## Skrinshotga chizish/belgilash (Snip & Sketch o'rnida, eskisidan kuchliroq)
+flameshot
+
+## Diskni tozalash (Storage Sense o'rnida)
+bleachbit
+
+## Diagnostika (kompyuter holatini tekshirish)
+hardinfo
+smartmontools
+gsmartcontrol
+stress
+memtest86+
+zenity
+
+## Klassik o'yinlar (Windows'dagi Solitaire, Minesweeper, Chess kabi)
+aisleriot
+gnome-mines
+gnome-chess
+gnome-mahjongg
+gnome-sudoku
+quadrapassel
+gnome-taquin
+gnome-klotski
+
+## Fayl/papkani parol bilan qulflash (EFS o'rnida)
+zulucrypt-gui
+zulucrypt-cli
+
+## Bir nechta monitor ulanishi (muammosiz ishlashi uchun)
+arandr
+autorandr
+x11-xserver-utils
+xserver-xorg-video-all
+
+## Parametr (Sozlamalar) ichidagi qo'shimcha qulayliklar - hammasi o'chiq, kerak bo'lsa yoqiladi
+power-profiles-daemon
+printer-driver-cups-pdf
+font-manager
+gucharmap
+
+## Sozlamalar (Windows Settings o'rnida - tarmoq, tovush, displey, foydalanuvchilar)
+gnome-control-center
+
+## Bildirishnomalar (Action Center o'rnida)
+xfce4-notifyd
+
+## Skrinshot olish vositasi (PrintScreen)
+xfce4-screenshooter
+
+## Rasm ko'ruvchi (Windows Photos o'rnida)
+ristretto
+
+## Qidiruv (fayl va dastur qidirish)
+catfish
+xfce4-appfinder
+
+## Vaqtinchalik xotira (clipboard) tarixi
+xfce4-clipman-plugin
+
+## Ekranni qulflash (Lock Screen)
+light-locker
+
+## Savat (Recycle Bin) va fayl tizimi xizmatlari
+gvfs
+gvfs-backends
+trash-cli
+
+## Disk boshqaruvi va USB xavfsiz chiqarish (Disk Management o'rnida)
+gnome-disk-utility
+
+## Quvvat sozlamalari (Power Options o'rnida)
+xfce4-power-manager
+
+## Qo'shimcha arxiv formatlari (rar, 7z)
+p7zip-full
+unrar
+
+## Uskunalar haqida ma'lumot (Device Manager o'rnida)
+lshw
+usbutils
+
